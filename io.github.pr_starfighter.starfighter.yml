@@ -4,8 +4,6 @@ runtime-version: '24.08'
 sdk: org.freedesktop.Sdk
 command: starfighter
 
-rename-icon: starfighter
-
 finish-args:
   - --device=dri
   - --share=ipc
@@ -18,6 +16,10 @@ finish-args:
 modules:
   - name: starfighter
     buildsystem: autotools
+    post-install:
+      - install -Dm644 misc/starfighter.png /app/share/icons/hicolor/128x128/apps/io.github.pr_starfighter.starfighter.png
+      - desktop-file-edit --set-key=Icon --set-value="io.github.pr_starfighter.starfighter" /app/share/applications/io.github.pr_starfighter.starfighter.desktop
+    sources:
     sources:
       - type: archive
         url: https://github.com/pr-starfighter/starfighter/archive/refs/tags/v2.4.0-1.tar.gz
