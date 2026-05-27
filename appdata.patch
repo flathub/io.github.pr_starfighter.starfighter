@@ -13,13 +13,14 @@
    <recommends>
      <control>keyboard</control>
      <control>gamepad</control>
-@@ -41,8 +42,8 @@
+@@ -41,8 +42,9 @@
    </screenshots>
  
    <url type="homepage">https://pr-starfighter.github.io/</url>
 -
 -  <icon type="stock">starfighter</icon>
 +  <url type="bugtracker">https://github.com/pr-starfighter/starfighter/issues</url>
++  <url type="vcs-browser">https://github.com/pr-starfighter/starfighter</url>
 +  <url type="donation">https://liberapay.com/diligentcircle</url>
    
    <categories>
